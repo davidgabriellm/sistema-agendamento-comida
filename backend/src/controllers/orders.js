@@ -10,6 +10,8 @@ export default class OrdersControllers {
         try {
             const orders = await this.dataAccess.getOrders()
 
+            
+
             return ok(orders)
         } catch (error) {
             return serverError(error)

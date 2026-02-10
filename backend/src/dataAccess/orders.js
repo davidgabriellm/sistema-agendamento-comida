@@ -4,6 +4,7 @@ import { ObjectId } from 'mongodb'
 const collectionName = 'orders'
 
 export default class OrdersDataAccess {
+
     async getOrders() {
         const result = await Mongo.db
         .collection(collectionName)
@@ -52,6 +53,8 @@ export default class OrdersDataAccess {
             }
         ])
         .toArray()
+
+       
 
         return result
     }
@@ -134,6 +137,7 @@ export default class OrdersDataAccess {
         const result = await Mongo.db
         .collection('orderItems')
         .insertMany(items)
+
 
         return result
     }
