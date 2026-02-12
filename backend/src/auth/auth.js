@@ -131,5 +131,4 @@ authRouter.post('/login', (req, res) => {
     })(req, res)
 })
 
-
 export default authRouter
